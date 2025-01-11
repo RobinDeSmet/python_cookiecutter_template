@@ -1,7 +1,10 @@
 import logging
 
+from utils.functions import configure_logging
 from dotenv import load_dotenv
 
+# configure logging
+configure_logging()
 logger = logging.getLogger(__name__)
 
 load_dotenv()
