@@ -14,11 +14,11 @@ load_dotenv()
 
 
 def main():
-    logger.info("Executing {{cookiecutter.package_name}}...")
+    logger.info("Running {{cookiecutter.__package_slug}}...")
 
     # Do stuff
 
-    logger.info("{{cookiecutter.package_name}} executed successfully.")
+    logger.info("{{cookiecutter.__package_slug}} executed successfully.")
 
 
 if __name__ == "__main__":
