@@ -1,6 +1,6 @@
 import logging
 
-from utils.functions import configure_logging
+from {{cookiecutter.__package_slug}}.utils.functions import configure_logging
 from dotenv import load_dotenv
 
 # configure logging
