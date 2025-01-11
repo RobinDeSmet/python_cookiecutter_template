@@ -1,9 +1,9 @@
 {
     "project_name": "Project name",
-    "project_slug": "{{ cookiecutter.project_name.lower()|replace(' ', '_')|replace('-', '_')|replace('.', '_')|trim() }}",
     "package_name": "Package name",
-    "package_slug": "{{ cookiecutter.project_name.lower()|replace(' ', '_')|replace('-', '_')|replace('.', '_')|trim() }}",
     "author": "Full name",
     "email": "you@yourdomain.com",
-    "description": "Project description"
+    "description": "Project description",
+    "_project_slug": "{{ cookiecutter.project_name.lower()|replace(' ', '_')|replace('-', '_')|replace('.', '_')|trim() }}",
+    "_package_slug": "{{ cookiecutter.project_name.lower()|replace(' ', '_')|replace('-', '_')|replace('.', '_')|trim() }}"
 }

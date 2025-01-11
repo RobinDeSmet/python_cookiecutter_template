@@ -1,2 +1,2 @@
-def test_{{cookiecutter.package_slug}}(setup_{{cookiecutter.package_slug}}):
+def test_{{cookiecutter._package_slug}}(setup_{{cookiecutter._package_slug}}):
     assert True
