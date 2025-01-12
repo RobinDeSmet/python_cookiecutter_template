@@ -8,15 +8,19 @@ if __name__ == "__main__":
     print("Validating the variables...")
 
     # Validate the project slug and package slug
-    if not bool(re.match("{{cookiecutter.__project_slug}}", NAMING_CONVENTION_REGEX)):
+    if not bool(re.match(NAMING_CONVENTION_REGEX, "{{cookiecutter.__project_slug}}")):
         print(
-            "The project name does not fit the naming conventions. Please do not use special characters or numbers."
+            """The package name does not fit the naming conventions.
+            Please do not use special characters, other then '_', or numbers at the front of the name.
+            """
         )
         sys.exit(1)
 
-    if not bool(re.match("{{cookiecutter.__package_slug}}", NAMING_CONVENTION_REGEX)):
+    if not bool(re.match(NAMING_CONVENTION_REGEX, "{{cookiecutter.__package_slug}}")):
         print(
-            "The package name does not fit the naming conventions. Please do not use special characters or numbers."
+            """The package name does not fit the naming conventions.
+            Please do not use special characters, other then '_', or numbers at the front of the name.
+            """
         )
         sys.exit(1)
 
