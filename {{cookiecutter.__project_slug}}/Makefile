@@ -7,7 +7,7 @@ test-no-integration:
 run:
 	poetry shell & poetry run python -m {{cookiecutter.__package_slug}}
 
-{%- if cookiecutter.license == "Yes" -%}
+{%- if cookiecutter.include_docker_files == "Yes" -%}
 up:
 	docker compose up -d
 
