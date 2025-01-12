@@ -4,6 +4,7 @@
     "author": "Full name",
     "email": "you@yourdomain.com",
     "description": "Project description",
+    "include_docker_files": ["Yes", "No"],
     "__project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_').replace('.', '_') }}",
     "__package_slug": "{{ cookiecutter.package_name.lower().replace(' ', '_').replace('-', '_').replace('.', '_')}}"
 }
