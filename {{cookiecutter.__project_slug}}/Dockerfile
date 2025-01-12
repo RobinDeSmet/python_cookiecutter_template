@@ -13,14 +13,15 @@ ENV PYTHONUNBUFFERED=1 \
     HOME=/home/
 ENV VIRTUAL_ENV="${HOME}/.venv"
 ENV PATH="${VIRTUAL_ENV}/bin:${PATH}"
+ENV PYTHONPATH="${HOME}/src:${PYTHONPATH}"
 
 RUN curl -sSL https://install.python-poetry.org | POETRY_HOME=/opt/poetry python3 - && \
     groupadd -g 1234 appuser && \
     useradd -m -u 1234 -g appuser appuser && \
     mkdir -p ${HOME}
 
-RUN ${POETRY_HOME}/bin/poetry --version
-ENV PYTHONPATH="${HOME}/src:${PYTHONPATH}"
+WORKDIR ${HOME}
+RUN poetry --version
 
 # Stage 1: build image
 # Install all runtime dependencies,
