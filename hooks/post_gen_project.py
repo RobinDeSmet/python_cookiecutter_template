@@ -1,9 +1,10 @@
 from pathlib import Path
 
 
+# Hook is run within the root directory of the project
 def remove_docker_files():
-    dockerfile_path = Path("{{cookiecutter.__project_slug}}", "Dockerfile")
-    dockercompose_path = Path("{{cookiecutter.__project_slug}}", "compose.yaml")
+    dockerfile_path = Path("Dockerfile")
+    dockercompose_path = Path("compose.yaml")
 
     dockerfile_path.unlink()
     dockercompose_path.unlink()
