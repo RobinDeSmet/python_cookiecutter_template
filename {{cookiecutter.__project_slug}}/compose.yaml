@@ -1,6 +1,6 @@
 services:
   app:
-    container_name: {{cookiecutter.__package_slug}}
+    container_name: "{{cookiecutter.__package_slug.replace('_', '-')}}"
     build:
       context: .
     restart: always
