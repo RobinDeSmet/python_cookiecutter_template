@@ -1,4 +1,4 @@
-# 🎉 {{cookiecutter.project_name}} 🤖
+# {{cookiecutter.project_name}}
 
 {{cookiecutter.description}}
 
@@ -18,8 +18,9 @@ The following environment variables need to be configured for the application to
 * Run `poetry install`
 * Create and fill in the required details in the `.env` file. You can copy this from `.env.template`
 * Run `make run`
-* Run `poetry run pre-commit install` to install the pre-commit hook
-
+* Run `poetry run pre-commit install` to install the pre-commit hook{% if cookiecutter.include_docker_files == "Yes" %}
+* Run the docker containers with: `make up` or build them with `make build`
+{% endif %}
 
 ## Testing
 * If you want to run the test suite, run `make test`
