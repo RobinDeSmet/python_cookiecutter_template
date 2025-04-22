@@ -5,7 +5,7 @@ test-no-integration:
 	poetry run pytest -s -v -m "not integration"
 
 run:
-	poetry shell & poetry run python -m {{cookiecutter.__package_slug}}
+	poetry run python -m {{cookiecutter.__package_slug}}
 {% if cookiecutter.include_docker_files == "Yes" %}
 up:
 	docker compose up -d
